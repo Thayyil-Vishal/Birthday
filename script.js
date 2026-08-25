@@ -251,7 +251,7 @@ const jaiButton = document.getElementById("jaiButton");
 const jaiReaction = document.getElementById("jaiReaction");
 
 jaiButton.addEventListener("click", () => {
-  jaiReaction.textContent = "😂 Yep. We remember that one!";
+  jaiReaction.textContent = "😂 Movie theatre flashback: she shouted it and I nearly jumped out of my seat! 🍿";
   confetti(110);
 });
 
