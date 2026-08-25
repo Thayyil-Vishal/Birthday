@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#09070d">
+<title>Happy Birthday, Anjana ✨</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="confetti"></canvas>
+<div class="stars"></div>
+
+<main>
+
+<!-- 1. OPENING -->
+<section class="screen active" id="screen-1">
+  <div class="eyebrow">A little birthday surprise ✨</div>
+
+  <div class="hero-photo">
+    <img src="assets/anjana-1.jpeg" alt="Anjana">
+  </div>
+
+  <h1>Happy Birthday,<br><span>Anjana!</span> 🎂</h1>
+  <p class="lead">Wishing you a day full of happiness, laughter and beautiful moments.</p>
+
+  <button class="btn next" data-next="2">Let's go ✨</button>
+</section>
+
+
+<!-- 2. LITTLE MESSAGE -->
+<section class="screen" id="screen-2">
+  <div class="eyebrow">Today deserves a little sparkle</div>
+  <h2>Birthday girl energy ✨</h2>
+
+  <div class="feature-card">
+    <div class="feature-photo">
+      <img src="assets/anjana-2.jpeg" alt="Anjana">
+    </div>
+    <div class="feature-copy">
+      <span class="number">01</span>
+      <h3>Keep smiling.</h3>
+      <p>
+        That cheerful, talkative energy of yours has a way of making
+        everything a little more fun.
+      </p>
+    </div>
+  </div>
+
+  <button class="btn next" data-next="3">Next ✨</button>
+</section>
+
+
+<!-- 3. FLOWER GAME -->
+<section class="screen game-screen" id="screen-3">
+  <div class="eyebrow">Okay birthday girl… one tiny challenge 🌸</div>
+  <h2>Catch the flowers!</h2>
+  <p class="game-text">
+    Seven flowers are going to move around.<br>
+    Catch all 7 before time runs out.
+  </p>
+
+  <div class="game-top">
+    <div>Flowers <strong><span id="flowerScore">0</span>/7</strong></div>
+    <div>Time <strong><span id="flowerTime">15</span>s</strong></div>
+  </div>
+
+  <div class="flower-game" id="flowerGame">
+    <div class="game-start-text">Ready? 🌸</div>
+  </div>
+
+  <div class="game-message" id="gameMessage"></div>
+
+  <button class="btn game-start" id="startGame">Start 🌸</button>
+  <button class="btn hidden" id="retryGame">Try again 🌸</button>
+  <button class="btn hidden" id="flowerWin">You caught them! 🌻</button>
+</section>
+
+
+<!-- 4. SUNFLOWER WIN -->
+<section class="screen" id="screen-4">
+  <div class="eyebrow">Okay, that was actually impressive 😄</div>
+
+  <div class="sunflower-bouquet" aria-hidden="true">
+    <span>🌻</span><span>🌻</span><span>🌻</span>
+    <span>🌻</span><span>🌻</span>
+  </div>
+
+  <h2>You caught them all! 🌻</h2>
+  <p class="lead">
+    So here are some flowers for the birthday girl.
+    You earned them. 😄
+  </p>
+
+  <button class="btn next" data-next="5">I'll take them 🌻</button>
+</section>
+
+
+<!-- 5. POSITIVE LITTLE THINGS -->
+<section class="screen" id="screen-5">
+  <div class="eyebrow">A few things worth celebrating</div>
+  <h2>More reasons to smile 💫</h2>
+
+  <div class="tiles">
+    <article>
+      <div class="tile-icon">🍦</div>
+      <h3>Good food</h3>
+      <p>Especially when there is ice cream involved.</p>
+    </article>
+
+    <article>
+      <div class="tile-icon">🎬</div>
+      <h3>Great stories</h3>
+      <p>One show at a time… slowly… very slowly. 😄</p>
+    </article>
+
+    <article>
+      <div class="tile-icon">😂</div>
+      <h3>Lots of laughter</h3>
+      <p>Keep that laugh coming all year long.</p>
+    </article>
+
+    <article>
+      <div class="tile-icon">✨</div>
+      <h3>Beautiful moments</h3>
+      <p>May this year give you plenty of them.</p>
+    </article>
+  </div>
+
+  <button class="btn next" data-next="6">Next ✨</button>
+</section>
+
+
+<!-- 6. PHOTO ALBUM — PAGE 1 -->
+<section class="screen gallery-screen" id="screen-6">
+  <div class="eyebrow">A little gallery 📸</div>
+  <div class="album-heading-row">
+    <div>
+      <div class="album-count">01 / 02</div>
+      <h2>Just being you.</h2>
+    </div>
+  </div>
+
+  <div class="album-grid album-grid-three">
+    <figure class="album-card">
+      <div class="album-photo"><img src="assets/anjana-1.jpeg" alt="Anjana in a yellow saree"></div>
+      <figcaption>✨ A beautiful moment</figcaption>
+    </figure>
+    <figure class="album-card">
+      <div class="album-photo"><img src="assets/anjana-2.jpeg" alt="Anjana in a purple and green saree"></div>
+      <figcaption>🌿 Simply elegant</figcaption>
+    </figure>
+    <figure class="album-card">
+      <div class="album-photo"><img src="assets/anjana-3.jpeg" alt="Anjana in a golden saree"></div>
+      <figcaption>💫 Birthday glow</figcaption>
+    </figure>
+  </div>
+
+  <button class="btn next" data-next="7">More pictures 📸</button>
+</section>
+
+
+<!-- 7. PHOTO ALBUM — PAGE 2 -->
+<section class="screen gallery-screen" id="screen-7">
+  <div class="eyebrow">And because three were definitely not enough 😄</div>
+  <div class="album-heading-row">
+    <div>
+      <div class="album-count">02 / 02</div>
+      <h2>More of that smile.</h2>
+    </div>
+  </div>
+
+  <div class="album-grid album-grid-two">
+    <figure class="album-card album-card-large">
+      <div class="album-photo"><img src="assets/anjana-4.jpeg" alt="Anjana in a red and yellow saree"></div>
+      <figcaption>🌸 Looking lovely</figcaption>
+    </figure>
+    <figure class="album-card album-card-large">
+      <div class="album-photo"><img src="assets/anjana-5.jpeg" alt="Anjana smiling in a saree"></div>
+      <figcaption>❤️ Keep that smile</figcaption>
+    </figure>
+  </div>
+
+  <button class="btn next" data-next="8">Continue ✨</button>
+</section>
+
+
+<!-- 8. BIRTHDAY WISH -->
+<section class="screen" id="screen-8">
+  <div class="eyebrow">A birthday wish, just for you 💌</div>
+
+  <div class="wish-card">
+    <div class="wish-star">✨</div>
+    <h2>Happy Birthday, Anjana!</h2>
+
+    <p>
+      May this year bring you loads of happiness, good health,
+      exciting memories, peaceful days, great food, amazing movies
+      and plenty of reasons to laugh.
+    </p>
+
+    <p>
+      Keep being your cheerful, talkative, fun-loving self.
+      You deserve a beautiful year ahead. ❤️
+    </p>
+
+    <div class="wish-end">Have the best birthday! 🎂</div>
+  </div>
+
+  <button class="btn next" data-next="9">Final surprise 🎆</button>
+</section>
+
+
+<!-- 9. FINAL -->
+<section class="screen final-screen" id="screen-9">
+  <div class="final-burst">🎉</div>
+  <div class="eyebrow">Today is all yours</div>
+
+  <h1>HAPPY<br><span>BIRTHDAY!</span></h1>
+
+  <!-- Full image is preserved inside this frame -->
+  <div class="final-photo">
+    <img src="assets/anjana-2.jpeg" alt="Anjana">
+  </div>
+
+  <p class="final-line">Stay happy. Keep smiling. Keep shining. ✨</p>
+
+  <button class="jai-button" id="jaiButton" aria-label="Bharat Mata Ki Jai">
+    <span class="india-flag" aria-hidden="true">
+      <svg viewBox="0 0 240 160" role="img" aria-label="Indian flag">
+        <rect width="240" height="53.33" fill="#FF9933"/>
+        <rect y="53.33" width="240" height="53.34" fill="#FFFFFF"/>
+        <rect y="106.67" width="240" height="53.33" fill="#138808"/>
+        <circle cx="120" cy="80" r="20" fill="none" stroke="#000080" stroke-width="2.5"/>
+        <circle cx="120" cy="80" r="3" fill="#000080"/>
+        <g stroke="#000080" stroke-width="1.8" transform="translate(120 80)">
+          <line y2="-20"/><line y2="20" transform="rotate(15)"/>
+          <line y2="-20" transform="rotate(30)"/><line y2="20" transform="rotate(45)"/>
+          <line y2="-20" transform="rotate(60)"/><line y2="20" transform="rotate(75)"/>
+          <line y2="-20" transform="rotate(90)"/><line y2="20" transform="rotate(105)"/>
+          <line y2="-20" transform="rotate(120)"/><line y2="20" transform="rotate(135)"/>
+          <line y2="-20" transform="rotate(150)"/><line y2="20" transform="rotate(165)"/>
+        </g>
+      </svg>
+    </span>
+    <span>Bharat Mata Ki Jai!</span>
+  </button>
+
+  <div class="jai-reaction" id="jaiReaction"></div>
+
+  <button class="ghost" id="replay">Replay ✨</button>
+</section>
+
+</main>
+
+<audio id="birthdayMusic" loop preload="auto">
+  <source src="birthday-song.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
