@@ -512,10 +512,40 @@ p{
 }
 
 .jai-reaction{
-  min-height:24px;
-  margin-top:8px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+  min-height:0;
+  max-width:720px;
+  margin-top:18px;
   color:var(--muted);
-  font-size:.82rem;
+  opacity:0;
+  transform:scale(.88);
+  pointer-events:none;
+}
+
+.jai-reaction.revealed{
+  animation:jaiReveal .55s cubic-bezier(.2,.85,.3,1.15) forwards;
+}
+
+@keyframes jaiReveal{
+  from{opacity:0;transform:scale(.88)}
+  to{opacity:1;transform:scale(1)}
+}
+
+.jai-reaction-title{
+  color:var(--gold);
+  font-size:clamp(1.65rem,5vw,3rem);
+  line-height:1.1;
+  text-align:center;
+}
+
+.jai-reaction-story{
+  max-width:650px;
+  font-size:clamp(.95rem,2vw,1.15rem);
+  line-height:1.5;
+  text-align:center;
 }
 
 .ghost{

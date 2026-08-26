@@ -249,9 +249,11 @@ function animateConfetti() {
 
 const jaiButton = document.getElementById("jaiButton");
 const jaiReaction = document.getElementById("jaiReaction");
+const jaiButtonLabel = document.getElementById("jaiButtonLabel");
 
 jaiButton.addEventListener("click", () => {
-  jaiReaction.textContent = "😂 Movie theatre flashback: she shouted it and I nearly jumped out of my seat! 🍿";
+  jaiButtonLabel.textContent = "😂 You knew what was coming!";
+  jaiReaction.classList.add("revealed");
   confetti(110);
 });
 
@@ -275,6 +277,9 @@ document.getElementById("replay").addEventListener("click", () => {
   startGameButton.classList.remove("hidden");
   retryGameButton.classList.add("hidden");
   flowerWinButton.classList.add("hidden");
+
+  jaiButtonLabel.textContent = "There's a little surprise here 👀";
+  jaiReaction.classList.remove("revealed");
 
   showScreen(1);
 });
